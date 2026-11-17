@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>Search Books</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<div id="layout"></div>
+
+
+<main class="content">
+
+    <div class="page-header">
+
+        <h2>Search Books</h2>
+
+        <p>
+            Find books by name, author or category.
+        </p>
+
+    </div>
+
+
+    <div class="card p-3 mb-4">
+
+        <div class="search-box">
+
+            <span class="search-icon">
+                🔎
+            </span>
+
+            <input
+                id="search"
+                onkeyup="studentSearch()"
+                class="form-control"
+                placeholder="Search by book, author or category">
+
+        </div>
+
+    </div>
+
+
+    <div class="card p-3">
+
+        <div class="table-responsive">
+
+            <table class="table table-hover">
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Book</th>
+                        <th>Author</th>
+                        <th>Category</th>
+                        <th>Available</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="searchTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<script src="js/app.js"></script>
+
+<script>
+    renderStudentLayout();
+    studentSearch();
+</script>
+
+</body>
+
+</html>
